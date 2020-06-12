@@ -2,6 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom' // React can be used on many platforms like mobile, or xbox
                                 // we use react-dom to render to the DOM/Browser
 import './index.css'
+import Popular from './components/Popular'
 
 // Component
 // State
@@ -11,8 +12,8 @@ import './index.css'
 class App extends React.Component{
     render(){
         return (
-        <div>
-            Hello World! Hello All! Meow
+        <div className='container'>
+           <Popular />
         </div>
         )
     }
