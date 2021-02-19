@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
 // functional componets, deconstructed props
 function LangaugesNav ({ selected, onUpdateLanguage }) {
@@ -17,6 +18,11 @@ function LangaugesNav ({ selected, onUpdateLanguage }) {
           ))}
         </ul>
       )
+    }
+    
+    LangaugesNav.propTypes = {
+      selected: PropTypes.string.isRequired,
+      onUpdateLanguage: PropTypes.func.isRequired
     }
     
     export default class Popular extends React.Component {
