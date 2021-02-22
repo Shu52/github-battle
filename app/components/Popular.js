@@ -33,6 +33,7 @@ export default class Popular extends React.Component {
     this.state = {
       selectedLanguage: 'All',
       // If state of repos and error is null, it means that those items are loading
+      //{} is for caching
       repos: {},
       error: null,
     }
@@ -53,11 +54,14 @@ export default class Popular extends React.Component {
       error: null,
     })
 
+    // if selectedLanguage is false or undifened
     if (!this.state.repos[selectedLanguage]) {
       fetchPopularRepos(selectedLanguage)
         .then((data) => {
+          //decontructed repos
           this.setState(({ repos }) => ({
             repos: {
+              //spread to merge and not replace data in rpos
               ...repos,
               [selectedLanguage]: data
             }
