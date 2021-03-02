@@ -5,8 +5,9 @@ import { FaUser, FaStar, FaCodeBranch, FaExclamationTriangle } from 'react-icons
 
 function LangaugesNav ({ selected, onUpdateLanguage }) {
   const languages = ['All', 'JavaScript', 'Ruby', 'Java', 'CSS', 'Python']
-
+  
   return (
+    
     <ul className='flex-center'>
       {languages.map((language) => (
         <li key={language}>
