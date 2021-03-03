@@ -76,7 +76,7 @@ class PlayerInput extends React.Component {
     }
 }
 
-PlayerInput.prototype = {
+PlayerInput.propTypes = {
     onSubmit: PropTypes.func.isRequired,
     label: PropTypes.string.isRequired
 }
@@ -86,7 +86,7 @@ export default class Battle extends React.Component {
         return (
             <React.Fragment>
                 <Instructions />
-               {/* <PlayerInput label="Label!" onSubmit={(value) => console.log('value')}/>  */}
+               <PlayerInput label="Label!" onSubmit={(value) => console.log('value')}/> 
             </React.Fragment>
         )
     }
